@@ -1,2 +1,2 @@
 # Environment setup guide
-VS Code Tips &amp; Tricks
+Some tips & tricks to set up a new environment.
