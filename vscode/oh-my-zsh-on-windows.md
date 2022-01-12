@@ -11,7 +11,10 @@ setup-x86_64.exe -q -P git,vim,curl,wget,zsh,chere,lynx
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
-- To set zsh as default shell, open and edit file `vi ~/.bashrc` by adding the following: `exec zsh`
+- To set zsh as default shell, open and edit file `vi ~/.bashrc` by adding the following:
+```
+exec zsh
+```
 - [*Optional*] Add cygwin to right-click context menu. Open in `Administator mode`:
 ```bash
 chere -i -t mintty -s bash
@@ -37,4 +40,25 @@ chmod +x Cygwin-ohmyzsh.bat
 },
 "terminal.integrated.defaultProfile.windows": "Oh my zsh",
 ```
-- Reload VS Code and done.
+- Reload VS Code.
+- Edit `~/.zshrc`, add (or update) the followings:
+```
+ZSH_THEME="robbyrussell"
+```
+```
+if [[ $TERM = dumb ]]; then
+    unset zle_bracketed_paste
+fi
+```
+-  Restart VS Code and done.
+
+### Notes:
+
+- Currently all the themes for Oh My Zsh on Windows 10 Education perform slowly, not recommended.
+- Fonts for those themes are not working too.
+- Recommend extensions:
+  - Install Lynx (the same as apt-get on Linux) to install packages:
+    ```
+    lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
+    install apt-cyg /bin
+    ```
