@@ -1,0 +1,1 @@
+# How to install Oh My Zsh on Windows & intergrate with VS Code
